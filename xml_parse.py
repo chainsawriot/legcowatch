@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import re
 
-vote = open("cm_vote_20150617.xml", "r").read()
-vote_bs = BeautifulSoup(vote, "html.parser")
+#vote = open("cm_vote_20150624.xml", "r").read()
+#vote_bs = BeautifulSoup(vote, "html.parser")
 
 def parse_meeting(meeting_tree):
     res = {}
@@ -53,4 +53,7 @@ def parse_vote(vote_tree):
         res['individual_votes'].append(inv)
     return res
 
-print parse_meeting(vote_bs.find('meeting'))
+#print parse_meeting(vote_bs.find('meeting'))
+#import pprint
+#pp = pprint.PrettyPrinter(indent=4)
+#pp.pprint(parse_meeting(vote_bs.find('meeting')))
